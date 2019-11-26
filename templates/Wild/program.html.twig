@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{{ program.title }}</h1>
+    <p>{{ program.summary }}</p>
+    <h3>Season's List</h3>
+    <ul>
+        {% for season in program.seasons %}
+            <li><a href="/wild/season/{{ season.id }}">{{ season.year }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

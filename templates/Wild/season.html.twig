@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <br>
+    {% for episode in seasons.episodes %}
+        <li><strong>{{ episode.title }}</strong></li>
+        <li>{{ episode.synopsys }}</li></br>
+        {{ dump(finalEpisode) }}
+    {% endfor %}
+    </ul>
+{% endblock %}
